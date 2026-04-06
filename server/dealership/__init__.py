@@ -1,0 +1,1 @@
+# Django dealership app

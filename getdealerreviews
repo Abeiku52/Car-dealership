@@ -1,0 +1,43 @@
+cURL command to get dealer reviews:
+
+$ curl -X GET http://127.0.0.1:8000/api/reviews/1/ \
+  -H "Content-Type: application/json"
+
+Response:
+[
+  {
+    "id": 1,
+    "dealer": 1,
+    "dealer_name": "Premium Auto Kansas City",
+    "user": 2,
+    "user_name": "john_doe",
+    "rating": 5,
+    "review_text": "Fantastic services! The staff was incredibly helpful and professional. I found the perfect car at a great price. Highly recommend this dealership to anyone looking for quality vehicles and excellent customer service.",
+    "purchase_date": "2024-03-15",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2024,
+    "sentiment": "positive",
+    "created_at": "2024-04-01T10:30:00Z",
+    "updated_at": "2024-04-01T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "dealer": 1,
+    "dealer_name": "Premium Auto Kansas City",
+    "user": 3,
+    "user_name": "sarah_smith",
+    "rating": 4,
+    "review_text": "Good experience overall. The sales team was knowledgeable and the process was smooth. Minor wait time but worth it for the quality of service.",
+    "purchase_date": "2024-03-20",
+    "car_make": "Honda",
+    "car_model": "Accord",
+    "car_year": 2023,
+    "sentiment": "positive",
+    "created_at": "2024-04-02T14:15:00Z",
+    "updated_at": "2024-04-02T14:15:00Z"
+  }
+]
+
+HTTP Status: 200 OK
+Total reviews for dealer ID 1: 2

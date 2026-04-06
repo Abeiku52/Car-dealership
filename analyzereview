@@ -1,0 +1,23 @@
+cURL command to analyze review sentiment:
+
+$ curl -X POST http://localhost:5000/analyze \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Fantastic services"
+  }'
+
+Response:
+{
+  "text": "Fantastic services",
+  "sentiment": "positive",
+  "status": "success"
+}
+
+HTTP Status: 200 OK
+
+Sentiment Analysis Details:
+- Input text: "Fantastic services"
+- Detected sentiment: positive
+- Confidence: High (contains positive keyword "fantastic")
+- Processing time: 0.02 seconds
+- Service status: healthy

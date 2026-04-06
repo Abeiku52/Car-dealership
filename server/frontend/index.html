@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Dealership - Home</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">Cars Dealership</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about/" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact/" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item" id="auth-link">
+                    <a href="/login/" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to Cars Dealership</h1>
+                <p>Find your perfect vehicle from our nationwide network of trusted dealers</p>
+                <div class="hero-actions">
+                    <a href="#dealers" class="btn-primary">Browse Dealers</a>
+                    <a href="#cars" class="btn-secondary">View Inventory</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="dealers-section" id="dealers">
+            <div class="container">
+                <h2>Our Dealers</h2>
+                <div class="filter-section">
+                    <label for="state-filter">Filter by State:</label>
+                    <select id="state-filter">
+                        <option value="">All States</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Texas">Texas</option>
+                        <option value="California">California</option>
+                    </select>
+                </div>
+                <div class="dealers-grid" id="dealers-grid">
+                    <!-- Dealers will be loaded here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cars-section" id="cars">
+            <div class="container">
+                <h2>Available Car Makes</h2>
+                <div class="cars-grid" id="cars-grid">
+                    <!-- Car makes will be loaded here via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cars Dealership</h3>
+                    <p>Your trusted partner in finding the perfect vehicle nationwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@carsdealership.com</p>
+                    <p>Phone: 1-800-CARS-123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cars Dealership. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

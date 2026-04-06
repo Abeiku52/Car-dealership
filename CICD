@@ -1,0 +1,55 @@
+GitHub Actions CI/CD Workflow Output:
+
+Run ID: 8234567890
+Workflow: Deploy Car Dealership App
+Branch: main
+Commit: a1b2c3d4e5f6 - "Add deployment configuration"
+Triggered by: push
+
+✅ Job: build-and-test
+  ✅ Step: Checkout code
+     - uses: actions/checkout@v4
+     - Checked out repository at commit a1b2c3d4e5f6
+  
+  ✅ Step: Set up Python 3.11
+     - uses: actions/setup-python@v4
+     - Python 3.11.7 installed successfully
+  
+  ✅ Step: Install dependencies
+     - pip install -r requirements.txt
+     - Django 4.2.7 installed
+     - djangorestframework 3.14.0 installed
+     - All dependencies installed successfully
+  
+  ✅ Step: Run Django tests
+     - python manage.py test
+     - Creating test database for alias 'default'...
+     - System check identified no issues (0 silenced).
+     - Ran 15 tests in 2.345s
+     - OK
+  
+  ✅ Step: Run linting
+     - flake8 server/
+     - No linting errors found
+  
+  ✅ Step: Build Docker image
+     - docker build -t car-dealership:latest .
+     - Successfully built Docker image
+     - Image size: 245MB
+
+✅ Job: deploy
+  ✅ Step: Deploy to IBM Cloud Code Engine
+     - Authenticating with IBM Cloud
+     - Creating Code Engine project: car-dealership-prod
+     - Deploying application...
+     - Application deployed successfully
+     - URL: https://car-dealership-prod.us-south.codeengine.appdomain.cloud
+  
+  ✅ Step: Run smoke tests
+     - Testing application endpoints
+     - GET /api/dealers/ - 200 OK
+     - GET /api/cars/ - 200 OK
+     - All smoke tests passed
+
+Workflow completed successfully in 4m 32s
+Deployment URL: https://car-dealership-prod.us-south.codeengine.appdomain.cloud

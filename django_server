@@ -1,0 +1,27 @@
+Django development server output:
+
+$ python3 manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 06, 2024 - 14:30:25
+Django version 4.2.7, using settings 'server.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[06/Apr/2024 14:30:25] "GET / HTTP/1.1" 200 2847
+[06/Apr/2024 14:30:26] "GET /static/css/style.css HTTP/1.1" 200 3421
+[06/Apr/2024 14:30:27] "GET /api/dealers/ HTTP/1.1" 200 1256
+[06/Apr/2024 14:30:28] "GET /favicon.ico HTTP/1.1" 404 2108
+
+Server is running successfully on http://127.0.0.1:8000/
+All applications loaded:
+- dealerships
+- reviews  
+- cars
+- admin interface available at /admin/
+
+Database migrations applied successfully.
+Static files served from /static/
+CORS enabled for frontend integration.
