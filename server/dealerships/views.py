@@ -17,7 +17,8 @@ class DealerListView(generics.ListAPIView):
             formatted_dealer = {
                 'id': dealer.id,
                 'name': dealer.name,
-                'full_name': dealer.name,  # Add full_name field
+                'short_name': dealer.name.split()[0],  # First word as short name
+                'full_name': dealer.name,  # Full name field
                 'city': dealer.city,
                 'state': dealer.state,
                 'address': dealer.address,
