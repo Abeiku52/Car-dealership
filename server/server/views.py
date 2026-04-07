@@ -87,12 +87,9 @@ def api_login(request):
 def api_logout_get(request):
     """API endpoint for user logout via GET request"""
     try:
-        # Get username before logout
-        username = request.user.username if request.user.is_authenticated else 'anonymous'
-        
         logout(request)
         return JsonResponse({
-            'userName': username,
+            'userName': '',
             'status': 'Logged out'
         })
     except Exception as e:
